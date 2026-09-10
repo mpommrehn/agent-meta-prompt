@@ -11,7 +11,7 @@ Every project built with an agent keeps one file, committed, at the project
 root:
 
 ```
-<project-dir-name>-EVOLUTION.md        for example goldshell-box-tools-EVOLUTION.md
+<project-dir-name>-EVOLUTION.md        for example goldshell-box-tools-productguy-EVOLUTION.md
 ```
 
 The name is derived from the directory so any harness can find it without
@@ -72,8 +72,8 @@ keep project templates, put the section in the templates.
 
 ## A worked example
 
-[goldshell-box-tools-EVOLUTION.md](https://github.com/crProductGuy/goldshell-box-tools/blob/main/goldshell-box-tools-EVOLUTION.md)
+[goldshell-box-tools-productguy-EVOLUTION.md](https://github.com/crProductGuy/goldshell-box-tools-productguy/blob/main/goldshell-box-tools-productguy-EVOLUTION.md)
 is the reconstructed log that prompted the rule, and
-[docs/how-this-project-evolved.md](https://github.com/crProductGuy/goldshell-box-tools/blob/main/docs/how-this-project-evolved.md)
+[docs/how-this-project-evolved.md](https://github.com/crProductGuy/goldshell-box-tools-productguy/blob/main/docs/how-this-project-evolved.md)
 is the essay written from it. This repository's own log is
 `agent-meta-prompt-EVOLUTION.md`.

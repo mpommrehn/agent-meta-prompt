@@ -54,7 +54,7 @@ write, what they think. This repository is the part that travels.
 - [agent-style-guide](https://github.com/mpommrehn/agent-style-guide): the
   Google developer documentation style as a skill, with a checker. The
   mechanical half of the voice pattern.
-- [goldshell-box-tools](https://github.com/crProductGuy/goldshell-box-tools):
+- [goldshell-box-tools-productguy](https://github.com/crProductGuy/goldshell-box-tools-productguy):
   a project built under this prompt, with a public evolution log and an
   essay written from it.
 
