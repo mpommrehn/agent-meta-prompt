@@ -1,0 +1,10 @@
+# internal checkpoint, stays local
+STATUS.md
+
+# editors / os
+.DS_Store
+Thumbs.db
+._*
+
+# Claude Code worktrees
+.claude/worktrees/
