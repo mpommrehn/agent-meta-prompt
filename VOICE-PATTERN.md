@@ -52,7 +52,8 @@ Two checkers, run before declaring a draft done:
   em-dashes, banned words, runs of bolded-phrase paragraph openers, a
   missing exclamation point in warm-register text, third-person pronouns
   in a resume).
-<!-- gstyle-ignore-start: the phrases below are quoted as examples -->
+<!-- the phrases below are quoted as examples of what the checker catches -->
+<!-- gstyle-ignore-start -->
 - A general checker for phrases that mark text as model-written whoever
   the voice belongs to: "stated plainly", "load-bearing", "the honest
   answer", "that said", "here's the thing", and the structural tics a
