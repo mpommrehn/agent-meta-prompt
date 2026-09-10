@@ -67,7 +67,36 @@ and branches on the result. An earlier version described the location in
 words ("a sibling of this file's parent"), a session misread it, reported
 the directory missing, and skipped the read. A command cannot be misread.
 
+## Two GitHub accounts on one Windows machine
+
+Found the hard way on 2026-09-09, pushing a repository under a second
+account. Git Credential Manager stores one token per host by default, so
+the first account to sign in answers for every repository on github.com,
+and a push to the other account's repository fails with "Permission
+denied to <first account>". Putting the username in the remote URL does
+not change which stored token is used.
+
+The fix has two parts, and both are needed:
+
+1. Key credentials by repository path, per repository:
+   `git config credential.useHttpPath true`. Each repository then keeps its
+   own token. Set it on every repository of both accounts, and remove the
+   host-level entry once (Windows Credential Manager, or
+   `cmdkey /delete:git:https://github.com`) so it stops shadowing.
+2. The manager signs in through the default browser's GitHub session, and
+   GitHub approves an already-authorized app without asking. So before the
+   first push of each repository, the default browser's profile must be
+   signed in to GitHub as the account that repository belongs to. A tab in
+   another browser or profile does not count. After that one push, the
+   token is stored per path and the browser no longer matters.
+
+Set the author identity per repository as well (`user.name`,
+`user.email`), or the commits carry the other account's name. Check
+authorship with `git log --format='%an <%ae>'` before the first push; it is
+rewritable until then and public after.
+
 ## Carrying changes between machines
+
 
 Files that are in a git repository travel as commits. For repositories
 with no remote, `git bundle` onto removable media works and is

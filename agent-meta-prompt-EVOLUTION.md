@@ -49,3 +49,14 @@ and style files; machine notes; any detail of private projects beyond the
 one public repository linked as an example. The GitHub remote is added
 after the author creates the empty repository; no CLI for that exists on
 the build machine.
+
+**Pushed, after a credential detour.** The first push was refused with
+"denied to <the author's other account>". The build machine's credential
+manager held one token for github.com, and after that token was removed
+it signed in through the default browser, whose GitHub session was the
+other account. Fix: credentials keyed by repository path on every
+repository, the default browser signed in as the right account for one
+push per repository, and a per-repository author identity, which also
+turned up that the first two commits had been authored under the other
+account's name; they were re-authored before the push. The whole episode
+is now a section in `MACHINE-CONTEXT.md`.
